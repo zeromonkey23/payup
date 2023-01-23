@@ -9,7 +9,8 @@
         android:paddingLeft="0dp"
         android:paddingRight="0dp"
         android:paddingTop="0dp"
-        tools:context=".ui.login.LoginActivity">
+        tools:context=".ui.login.LoginActivity"
+        android:foregroundTint="#FFFFFF">
 
     <ImageView
             android:layout_width="0dp"
@@ -43,7 +44,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            android:layout_marginTop="128dp"
+            android:layout_marginTop="156dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
             android:textSize="34sp"
@@ -103,7 +104,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="24dp"
-            android:paddingHorizontal="64dp" />
+            android:paddingHorizontal="64dp"
+            app:layout_constraintHorizontal_bias="0.497"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textAlignment="center" />
 
     <Button
             android:id="@+id/register"
@@ -111,11 +116,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/action_register"
-            android:textColor="#2196F3"
+            android:textColor="@color/link"
             app:layout_constraintTop_toBottomOf="@+id/login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:background="#00000000" />
+            android:background="#00000000"
+            android:textSize="16sp" />
 
     <ProgressBar
             android:id="@+id/loading"
@@ -140,7 +146,8 @@
             app:layout_constraintTop_toBottomOf="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="64dp" />
+            android:layout_marginStart="64dp"
+            android:textSize="16sp" />
 
     <CheckBox
             android:text="Remember Me"
@@ -156,6 +163,7 @@
             android:textColor="@color/white"
             android:checked="false"
             style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-            android:buttonTint="@color/ic_launcher_background" />
+            android:buttonTint="@color/ic_launcher_background"
+            android:textSize="14sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

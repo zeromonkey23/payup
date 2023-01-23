@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/container"
@@ -10,76 +9,107 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context=".ui.register.RegisterActivity">
+        android:fitsSystemWindows="true"
+        tools:context=".ui.register.RegisterActivity"
+        android:background="@drawable/gradient_bg"
+        tools:actionBarNavMode="standard">
+
+    <TextView
+            android:text="Create Account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="34sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar3"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="32dp" />
 
     <EditText
             android:id="@+id/name"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="96dp"
+            android:layout_height="48dp"
             android:autofillHints="@string/prompt_name"
             android:hint="@string/prompt_name"
             android:inputType="text"
             android:selectAllOnFocus="true"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="64dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="24dp" />
 
     <EditText
             android:id="@+id/username"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_height="48dp"
             android:autofillHints="@string/prompt_email"
             android:hint="@string/prompt_email"
             android:inputType="textEmailAddress"
             android:selectAllOnFocus="true"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="24dp" />
 
     <EditText
             android:id="@+id/phone"
             android:layout_width="0dp"
-            android:layout_marginTop="8dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:autofillHints="@string/prompt_phone"
             android:hint="@string/prompt_phone"
             android:inputType="phone"
             android:selectAllOnFocus="true"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/username"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" />
 
     <EditText
             android:id="@+id/password"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_height="48dp"
             android:autofillHints="@string/prompt_password"
             android:hint="@string/prompt_password"
             android:imeActionLabel="@string/action_sign_in_short"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:selectAllOnFocus="true"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phone"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/rounded_edittext"
+            android:paddingHorizontal="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/phone"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" />
 
     <Button
             android:id="@+id/submit"
             android:enabled="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="6dp"
             android:text="@string/action_submit"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password"
-            app:layout_constraintVertical_bias="0.188"
-            app:layout_constraintHorizontal_bias="0.498"/>
+            android:layout_marginTop="64dp"
+            android:textColor="@color/dark_blue"
+            android:paddingHorizontal="64dp" />
+
     <ProgressBar
             android:id="@+id/loading"
             android:visibility="gone"
@@ -92,6 +122,17 @@
             app:layout_constraintEnd_toEndOf="@+id/password"
             app:layout_constraintStart_toStartOf="@+id/password"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3"/>
+            app:layout_constraintVertical_bias="0.3" />
+
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:theme="?attr/actionBarTheme"
+            android:minHeight="?attr/actionBarSize"
+            android:id="@+id/toolbar3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
