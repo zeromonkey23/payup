@@ -25,8 +25,8 @@
             app:layout_constraintHorizontal_bias="0.0" />
 
     <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="264dp"
+            android:layout_height="79dp"
             app:srcCompat="@drawable/payup_logo_1"
             android:id="@+id/imageView2"
             app:layout_constraintTop_toTopOf="parent"
