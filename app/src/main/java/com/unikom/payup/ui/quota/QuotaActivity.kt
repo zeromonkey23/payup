@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.unikom.payup.R
 import com.unikom.payup.databinding.ActivityQuotaBinding
 import com.unikom.payup.ui.main.MainActivity
+import com.unikom.payup.ui.payment.PaymentActivity
 import kotlinx.android.synthetic.main.activity_quota.quota1
 import kotlinx.android.synthetic.main.activity_quota.quota2
 import kotlinx.android.synthetic.main.activity_quota.quota3
@@ -92,14 +93,13 @@ class QuotaActivity : AppCompatActivity() {
     }
 
     private fun submitForm() {
-        val welcome = getString(R.string.welcome)
         Toast.makeText(
             applicationContext,
-            "$welcome, you are successfully registered",
+            "Selamat, transaksi anda berhasil!",
             Toast.LENGTH_LONG
         ).show()
 
-        val mainActivityIntent = Intent(this, MainActivity::class.java)
-        startActivity(mainActivityIntent)
+        val paymentIntent = Intent(this, PaymentActivity::class.java)
+        startActivity(paymentIntent)
     }
 }
