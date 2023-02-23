@@ -18,15 +18,14 @@
             app:srcCompat="@drawable/image_1"
             android:id="@+id/imageView"
             android:scaleType="fitEnd"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     <ImageView
-            android:layout_width="264dp"
-            android:layout_height="79dp"
+            android:layout_width="280dp"
+            android:layout_height="100dp"
             app:srcCompat="@drawable/payup_logo_1"
             android:id="@+id/imageView2"
             app:layout_constraintTop_toTopOf="parent"
